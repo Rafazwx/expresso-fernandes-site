@@ -113,13 +113,15 @@
 .cidades-mg li:hover {  transform: translateX(4px); }
 .cidades-sp li:hover { color: var(--preto-suave); transform: translateX(5px); }
 
-/* Responsividade Home */
+/* =========================================================
+   RESPONSIVIDADE HOME (TABLET E CELULAR)
+   ========================================================= */
 @media (max-width: 1024px) {
     .hero-premium { margin-top: 180px; }
 }
 
 @media (max-width: 768px) {
-    /* Novo espaço para o cabeçalho que agora é mais alto no telemóvel */
+    /* Desce mais o banner para o cabeçalho não cobrir o caminhão */
     .hero-premium { margin-top: 250px; } 
 
     .hero-content h2 { font-size: 2.2rem; }

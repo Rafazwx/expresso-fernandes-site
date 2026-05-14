@@ -46,12 +46,12 @@
 @media (max-width: 768px) {
     /* Ajuste do Logótipo e Nome da Empresa */
     .logo-area-completa { 
-        flex-direction: column; /* Coloca o logo em cima e o texto em baixo */
+        flex-direction: column; 
         gap: 5px; 
         text-align: center;
     }
-    .logo-icone-efs { height: 60px; } /* Reduz um pouco o tamanho do logo */
-    .logo-area-completa h1 { font-size: 1.25rem; } /* Reduz a fonte do título */
+    .logo-icone-efs { height: 60px; } 
+    .logo-area-completa h1 { font-size: 1.25rem; } 
 
     /* Ajuste do Menu (Links) */
     .menu ul { 
@@ -61,9 +61,9 @@
         margin-top: 10px; 
         width: 100%;
     }
-    .menu a { font-size: 0.95rem; } /* Deixa os links menores para caberem bem */
+    .menu a { font-size: 0.95rem; } 
 
-    /* Ajuste do Botão Rastrear Carga (Vira um botão largo na sua própria linha) */
+    /* Ajuste do Botão Rastrear Carga (Ocupa linha inteira) */
     .menu ul li:last-child { 
         width: 100%; 
         margin-top: 10px; 
