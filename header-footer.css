@@ -40,7 +40,7 @@
    ========================================================= */
 @media (max-width: 768px) {
     /* Força o cabeçalho a ser uma coluna centralizada */
-    .cabecalho { 
+    header.cabecalho { 
         flex-direction: column !important; 
         align-items: center !important;
         padding: 10px 5px !important; 
@@ -48,15 +48,20 @@
     
     .logo-area-completa { 
         flex-direction: column !important; 
-        gap: 0px !important; 
+        gap: 0 !important; 
         text-align: center !important;
         margin-bottom: 5px !important;
     }
     
     .logo-icone-efs { height: 45px !important; } /* Logo menorzinho */
-    .logo-area-completa h1 { font-size: 1rem !important; margin-top: 5px !important; line-height: 1.1 !important; } 
+    .logo-area-completa h1 { 
+        font-size: 1rem !important; 
+        margin-top: 5px !important; 
+        line-height: 1.1 !important; 
+        text-align: center !important; 
+    } 
 
-    /* Menu em uma linha compacta */
+    /* Menu em uma grelha compacta e centralizada */
     .menu { width: 100% !important; margin-top: 5px !important; }
     .menu ul { 
         display: flex !important;
@@ -68,8 +73,11 @@
     
     .menu a { font-size: 0.85rem !important; padding: 5px !important; } 
 
-    /* Botão Rastrear Carga */
-    .menu ul li:last-child { width: 90% !important; margin: 10px auto 0 auto !important; }
+    /* Botão Rastrear Carga ocupa sua própria linha */
+    .menu ul li:last-child { 
+        width: 90% !important; 
+        margin: 10px auto 0 auto !important; 
+    }
     .btn-rastreio { 
         display: block !important; 
         text-align: center !important; 

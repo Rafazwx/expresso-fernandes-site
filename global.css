@@ -28,17 +28,22 @@ body {
 
 /* WHATSAPP FLUTUANTE (CORRIGIDO E INQUEBRÁVEL) */
 /* =========================================================
-   AJUSTE DO WHATSAPP NO CELULAR
+/* =========================================================
+   AJUSTE CIRÚRGICO DO WHATSAPP NO CELULAR
    ========================================================= */
 @media (max-width: 768px) {
     /* Pega qualquer link de whatsapp flutuante e encolhe */
     a[href*="wa.me"]:not(.btn-rastreio) {
         font-size: 0.9rem !important;
         padding: 10px 15px !important;
-        bottom: 15px !important;
-        right: 15px !important;
+        bottom: 15px !important; /* Mais perto do chão */
+        right: 15px !important; /* Mais perto da borda */
         border-radius: 30px !important;
         width: auto !important; /* Impede ele de ficar gigante */
+        
+        /* A MÁGICA ACONTECE AQUI: FICA SOBRE TUDO */
+        z-index: 1000 !important; 
+        
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
