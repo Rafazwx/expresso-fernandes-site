@@ -115,19 +115,21 @@
 
 /* =========================================================
    RESPONSIVIDADE HOME (TABLET E CELULAR)
-   ========================================================= */
-@media (max-width: 1024px) {
-    .hero-premium { margin-top: 180px; }
-}
-
 @media (max-width: 768px) {
-    /* Desce mais o banner para o cabeçalho não cobrir o caminhão */
-    .hero-premium { margin-top: 250px; } 
+    /* Ajusta a foto e a distância do topo */
+    .hero-premium { 
+        margin-top: 155px !important; /* Encaixa perfeito abaixo do novo cabeçalho */
+        min-height: 500px !important; /* Não estica tanto a foto no celular */
+        background-position: center !important; /* Centraliza o camião */
+        padding: 30px 5% !important;
+    } 
 
-    .hero-content h2 { font-size: 2.2rem; }
-    .titulo-secao.esquerdo h2 { font-size: 2rem; text-align: center; }
+    /* Diminui os textos gigantes */
+    .hero-content h2 { font-size: 1.8rem !important; line-height: 1.2 !important; margin-bottom: 15px !important; margin-top: 10px !important; }
+    .desc { font-size: 0.95rem !important; }
+    
+    .titulo-secao.esquerdo h2 { font-size: 1.8rem !important; text-align: center; }
     .titulo-secao.esquerdo .linha-detalhe { margin: 15px auto; }
-    .sobre-texto p { text-align: center; }
+    .sobre-texto p { text-align: center; font-size: 1.1rem !important; }
     .estado-grupo ul { grid-template-columns: 1fr; }
-    .link-invisivel-prazos { width: 40%; height: 6%; top: 46%; left: 10%; }
-}
+    .link-invisivel-prazos { width: 50%; height: 8%; top: 46%; left: 25%; }

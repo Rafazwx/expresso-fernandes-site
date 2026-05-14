@@ -39,38 +39,41 @@
    RESPONSIVIDADE CABEÇALHO (TABLET E CELULAR)
    ========================================================= */
 @media (max-width: 768px) {
-    /* Ajuste do Logótipo e Nome da Empresa */
-    .cabecalho { padding: 10px; }
-    .logo-area-completa { 
-        flex-direction: column; 
-        gap: 5px; 
-        text-align: center;
-    }
-    .logo-icone-efs { height: 50px; } /* Logótipo num tamanho perfeito */
-    .logo-area-completa h1 { font-size: 1.15rem; } 
-
-    /* Menu transformado numa grelha elegante de 2 colunas */
-    .menu ul { 
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-        gap: 10px; 
-        width: 100%;
-        padding: 0;
-        margin-top: 15px;
+    /* Força o cabeçalho a ser uma coluna centralizada */
+    .cabecalho { 
+        flex-direction: column !important; 
+        align-items: center !important;
+        padding: 10px 5px !important; 
     }
     
-    .menu ul li { text-align: center; }
-    .menu a { font-size: 0.95rem; display: block; padding: 5px; } 
-
-    /* Botão Rastrear Carga ocupando a linha inteira em baixo */
-    .menu ul li:last-child { 
-        grid-column: span 2; /* Ocupa as duas colunas */
-        margin-top: 5px; 
+    .logo-area-completa { 
+        flex-direction: column !important; 
+        gap: 0px !important; 
+        text-align: center !important;
+        margin-bottom: 5px !important;
     }
+    
+    .logo-icone-efs { height: 45px !important; } /* Logo menorzinho */
+    .logo-area-completa h1 { font-size: 1rem !important; margin-top: 5px !important; line-height: 1.1 !important; } 
+
+    /* Menu em uma linha compacta */
+    .menu { width: 100% !important; margin-top: 5px !important; }
+    .menu ul { 
+        display: flex !important;
+        flex-wrap: wrap !important; 
+        justify-content: center !important; 
+        gap: 8px 15px !important; 
+        padding: 0 !important;
+    }
+    
+    .menu a { font-size: 0.85rem !important; padding: 5px !important; } 
+
+    /* Botão Rastrear Carga */
+    .menu ul li:last-child { width: 90% !important; margin: 10px auto 0 auto !important; }
     .btn-rastreio { 
-        display: block; 
-        text-align: center; 
-        padding: 12px !important; 
-        font-size: 1.05rem;
+        display: block !important; 
+        text-align: center !important; 
+        padding: 10px !important; 
+        font-size: 0.95rem !important;
     }
 }

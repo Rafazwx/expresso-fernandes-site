@@ -27,15 +27,20 @@ body {
 }
 
 /* WHATSAPP FLUTUANTE (CORRIGIDO E INQUEBRÁVEL) */
-.whatsapp-float { 
-    position: fixed; bottom: 30px; right: 30px; 
-    background: #25d366; color: white; padding: 12px 25px; 
-    border-radius: 50px; text-decoration: none; z-index: 9999; 
-    display: flex; align-items: center; gap: 10px; font-weight: bold; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
-    transition: transform 0.3s ease;
+/* =========================================================
+   AJUSTE DO WHATSAPP NO CELULAR
+   ========================================================= */
+@media (max-width: 768px) {
+    /* Pega qualquer link de whatsapp flutuante e encolhe */
+    a[href*="wa.me"]:not(.btn-rastreio) {
+        font-size: 0.9rem !important;
+        padding: 10px 15px !important;
+        bottom: 15px !important;
+        right: 15px !important;
+        border-radius: 30px !important;
+        width: auto !important; /* Impede ele de ficar gigante */
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
 }
-
-.whatsapp-float:hover { transform: scale(1.05); }
-.whatsapp-float img { width: 30px; height: auto; display: block; }
-.whatsapp-float span { white-space: nowrap; font-size: 1.1rem; }
