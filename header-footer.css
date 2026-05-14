@@ -19,6 +19,16 @@
 .logo-area-completa h1 { font-size: 24px; color: var(--preto-suave); font-weight: 800; margin: 0; }
 .destaque-vermelho { color: var(--vermelho-efs); }
 
+/* Esconde o botão hamburguer no Computador */
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: var(--preto-suave);
+    cursor: pointer;
+}
+
 .menu ul { display: flex; list-style: none; gap: 30px; align-items: center; margin: 0; padding: 0; }
 .menu a { text-decoration: none; color: #1a1a2e; font-weight: 800; font-size: 1.15rem; text-transform: uppercase; transition: color 0.3s ease; }
 .menu a:hover { color: var(--vermelho-efs); }
@@ -36,53 +46,78 @@
 .rodape { padding: 40px; background: #f4f4f4; text-align: center; border-top: 1px solid #ddd; }
 
 /* =========================================================
-   RESPONSIVIDADE CABEÇALHO E RODAPÉ (TABLET E CELULAR)
+   RESPONSIVIDADE CABEÇALHO (TABLET E CELULAR) - MENU HAMBÚRGUER
    ========================================================= */
 @media (max-width: 768px) {
+    /* Mantém o Logo na Esquerda e o Botão na Direita */
     header.cabecalho { 
-        flex-direction: column !important; 
-        align-items: center !important;
-        padding: 10px 5px !important; 
+        flex-direction: row !important; 
+        justify-content: space-between !important;
+        flex-wrap: wrap !important; /* Permite que o menu abra na linha de baixo */
+        padding: 10px 5% !important; 
     }
     
     .logo-area-completa { 
-        flex-direction: column !important; 
-        gap: 0 !important; 
-        text-align: center !important;
-        margin-bottom: 5px !important;
+        flex-direction: row !important; 
+        gap: 10px !important; 
+        text-align: left !important;
+        margin-bottom: 0 !important;
     }
     
-    .logo-icone-efs { height: 45px !important; }
+    .logo-icone-efs { height: 40px !important; }
     .logo-area-completa h1 { 
-        font-size: 1rem !important; 
-        margin-top: 5px !important; 
-        line-height: 1.1 !important; 
-        text-align: center !important; 
+        font-size: 0.95rem !important; 
+        margin-top: 0 !important; 
+        text-align: left !important; 
     } 
 
-    .menu { width: 100% !important; margin-top: 5px !important; }
+    /* Mostra o botão hambúrguer no celular */
+    .menu-hamburguer {
+        display: block !important;
+    }
+
+    /* ESCONDE O MENU POR PADRÃO */
+    .menu { 
+        width: 100% !important; 
+        display: none !important; /* Escondido */
+        margin-top: 15px !important; 
+    }
+
+    /* CLASSE MÁGICA: O JS vai adicionar esta classe quando o utilizador clicar */
+    .menu.ativo {
+        display: block !important; 
+    }
+
+    /* Estiliza o menu aberto (uma lista limpa, para baixo) */
     .menu ul { 
         display: flex !important;
-        flex-wrap: wrap !important; 
-        justify-content: center !important; 
-        gap: 8px 15px !important; 
-        padding: 0 !important;
+        flex-direction: column !important; /* Fica um por linha */
+        gap: 0 !important; 
+        padding: 15px !important;
+        background-color: #f8f9fa !important; /* Fundo cinza suave */
+        border-radius: 8px !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     
-    .menu a { font-size: 0.85rem !important; padding: 5px !important; } 
+    .menu a { 
+        font-size: 1rem !important; 
+        padding: 15px 10px !important; 
+        text-align: left !important; 
+        display: block !important;
+        border-bottom: 1px solid #e0e0e0; /* Linha separadora */
+    } 
 
-    .menu ul li:last-child { 
-        width: 90% !important; 
-        margin: 10px auto 0 auto !important; 
-    }
+    .menu ul li:last-child a { border-bottom: none; } /* Tira a linha do último item */
+
     .btn-rastreio { 
         display: block !important; 
         text-align: center !important; 
-        padding: 10px !important; 
-        font-size: 0.95rem !important;
+        padding: 15px !important; 
+        margin-top: 10px !important;
+        font-size: 1.05rem !important;
     }
 
-    /* PROBLEMA 4 RESOLVIDO: TEXTO DO RODAPÉ REDUZIDO */
+    /* Rodapé Reduzido */
     .rodape { padding: 25px 10px !important; }
     .logo-rodape h1 { font-size: 1.25rem !important; margin-bottom: 15px !important; }
     .rodape p { font-size: 0.85rem !important; line-height: 1.4 !important; }
