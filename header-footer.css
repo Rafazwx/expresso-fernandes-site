@@ -38,39 +38,39 @@
 /* =========================================================
    RESPONSIVIDADE CABEÇALHO (TABLET E CELULAR)
    ========================================================= */
-@media (max-width: 1024px) {
-    .cabecalho { flex-direction: column; padding: 15px; }
-    .logo-area-completa { margin-bottom: 15px; }
-}
-
 @media (max-width: 768px) {
     /* Ajuste do Logótipo e Nome da Empresa */
+    .cabecalho { padding: 10px; }
     .logo-area-completa { 
         flex-direction: column; 
         gap: 5px; 
         text-align: center;
     }
-    .logo-icone-efs { height: 60px; } 
-    .logo-area-completa h1 { font-size: 1.25rem; } 
+    .logo-icone-efs { height: 50px; } /* Logótipo num tamanho perfeito */
+    .logo-area-completa h1 { font-size: 1.15rem; } 
 
-    /* Ajuste do Menu (Links) */
+    /* Menu transformado numa grelha elegante de 2 colunas */
     .menu ul { 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        gap: 10px 20px; 
-        margin-top: 10px; 
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+        gap: 10px; 
         width: 100%;
+        padding: 0;
+        margin-top: 15px;
     }
-    .menu a { font-size: 0.95rem; } 
+    
+    .menu ul li { text-align: center; }
+    .menu a { font-size: 0.95rem; display: block; padding: 5px; } 
 
-    /* Ajuste do Botão Rastrear Carga (Ocupa linha inteira) */
+    /* Botão Rastrear Carga ocupando a linha inteira em baixo */
     .menu ul li:last-child { 
-        width: 100%; 
-        margin-top: 10px; 
+        grid-column: span 2; /* Ocupa as duas colunas */
+        margin-top: 5px; 
     }
     .btn-rastreio { 
         display: block; 
         text-align: center; 
         padding: 12px !important; 
+        font-size: 1.05rem;
     }
 }

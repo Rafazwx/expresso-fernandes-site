@@ -2,20 +2,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const banner = document.getElementById('cookie-banner');
     const botaoAceitar = document.getElementById('aceitar-cookies');
 
-    // 1. Verificar se o usuário já aceitou os cookies anteriormente
-    if (!localStorage.getItem('cookies-aceitos')) {
-        
-        // 2. Aguarda 4 segundos (4000ms) após carregar a página para mostrar
-        setTimeout(() => {
-            banner.classList.add('mostrar');
-        }, 4000);
+    if (!banner || !botaoAceitar) return;
+
+    // 1. Verifica se já aceitou antes. Se sim, esconde o banner completamente e para o código.
+    if (localStorage.getItem('cookies-aceitos') === 'true') {
+        banner.style.display = 'none';
+        return;
     }
 
-    // 3. Ao clicar no botão, remove o banner e salva a decisão
+    // 2. Se não aceitou, mostra o banner após 4 segundos
+    setTimeout(() => {
+        banner.classList.add('mostrar');
+    }, 4000);
+
+    // 3. Ação à prova de falhas para quando o utilizador clicar em "Aceitar"
     botaoAceitar.addEventListener('click', () => {
         banner.classList.remove('mostrar');
-        
-        // Salva no navegador para não incomodar o cliente novamente
-        localStorage.setItem('cookies-aceitos', 'true');
+        banner.style.display = 'none'; // Garante que desaparece na hora!
+        localStorage.setItem('cookies-aceitos', 'true'); // Grava a escolha
     });
 });
