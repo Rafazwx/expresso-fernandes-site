@@ -36,10 +36,9 @@
 .rodape { padding: 40px; background: #f4f4f4; text-align: center; border-top: 1px solid #ddd; }
 
 /* =========================================================
-   RESPONSIVIDADE CABEÇALHO (TABLET E CELULAR)
+   RESPONSIVIDADE CABEÇALHO E RODAPÉ (TABLET E CELULAR)
    ========================================================= */
 @media (max-width: 768px) {
-    /* Força o cabeçalho a ser uma coluna centralizada */
     header.cabecalho { 
         flex-direction: column !important; 
         align-items: center !important;
@@ -61,7 +60,6 @@
         text-align: center !important; 
     } 
 
-    /* Menu em uma grelha compacta e centralizada */
     .menu { width: 100% !important; margin-top: 5px !important; }
     .menu ul { 
         display: flex !important;
@@ -73,7 +71,6 @@
     
     .menu a { font-size: 0.85rem !important; padding: 5px !important; } 
 
-    /* Botão Rastrear Carga ocupa sua própria linha */
     .menu ul li:last-child { 
         width: 90% !important; 
         margin: 10px auto 0 auto !important; 
@@ -84,4 +81,9 @@
         padding: 10px !important; 
         font-size: 0.95rem !important;
     }
+
+    /* PROBLEMA 4 RESOLVIDO: TEXTO DO RODAPÉ REDUZIDO */
+    .rodape { padding: 25px 10px !important; }
+    .logo-rodape h1 { font-size: 1.25rem !important; margin-bottom: 15px !important; }
+    .rodape p { font-size: 0.85rem !important; line-height: 1.4 !important; }
 }

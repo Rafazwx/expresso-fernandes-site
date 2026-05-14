@@ -3,10 +3,10 @@
    ========================================================= */
 .cookie-container {
     position: fixed;
-    bottom: -150px; /* Começa escondido abaixo da tela */
+    bottom: -150px; 
     left: 0;
     width: 100%;
-    background: #0d1b2a; /* Azul Premium do site */
+    background: #0d1b2a; 
     color: white;
     padding: 30px 5%;
     box-shadow: 0 -10px 30px rgba(0,0,0,0.3);
@@ -14,10 +14,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: bottom 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito suave de subida */
+    transition: bottom 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
-/* Classe que o JavaScript vai adicionar após 4 segundos */
 .cookie-container.mostrar {
     bottom: 0;
 }
@@ -61,7 +60,6 @@
     background-color: #b92e3a;
 }
 
-/* Ajuste para Telemóveis */
 @media (max-width: 768px) {
     .cookie-content {
         flex-direction: column;
