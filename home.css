@@ -117,7 +117,11 @@
 @media (max-width: 1024px) {
     .hero-premium { margin-top: 180px; }
 }
+
 @media (max-width: 768px) {
+    /* Novo espaço para o cabeçalho que agora é mais alto no telemóvel */
+    .hero-premium { margin-top: 250px; } 
+
     .hero-content h2 { font-size: 2.2rem; }
     .titulo-secao.esquerdo h2 { font-size: 2rem; text-align: center; }
     .titulo-secao.esquerdo .linha-detalhe { margin: 15px auto; }
