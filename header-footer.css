@@ -40,7 +40,6 @@
         position: fixed !important;
     }
     
-    /* Centraliza o Logo no telemóvel */
     .logo-area-completa { 
         flex-direction: column !important; 
         text-align: center !important; 
@@ -49,19 +48,20 @@
     .logo-icone-efs { height: 50px !important; }
     .logo-area-completa h1 { font-size: 1.1rem !important; }
 
-    /* Estilo das 3 barrinhas */
+    /* ESTILO DO BOTÃO HAMBÚRGUER */
     .menu-hamburguer {
         display: flex !important;
         flex-direction: column;
         justify-content: space-between;
-        width: 35px;
-        height: 25px;
+        width: 32px;
+        height: 22px;
         background: none;
         border: none;
         cursor: pointer;
         position: absolute;
         top: 25px;
         right: 20px;
+        z-index: 1001; /* Garante que fica por cima de tudo */
     }
     .menu-hamburguer span {
         display: block;
@@ -69,16 +69,26 @@
         height: 4px;
         background-color: var(--preto-suave);
         border-radius: 4px;
-        transition: 0.3s;
+        transition: 0.4s ease; /* Animação suave */
     }
 
-    /* Esconde a lista de links até clicar */
+    /* ANIMAÇÃO DO "X" QUANDO O MENU ESTÁ ABERTO */
+    .menu-hamburguer.ativo span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-hamburguer.ativo span:nth-child(2) {
+        opacity: 0; /* Esconde a linha do meio */
+    }
+    .menu-hamburguer.ativo span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* MENU DE LINKS */
     .menu { 
         display: none !important; 
         width: 100% !important; 
         margin-top: 15px !important; 
     }
-    /* Mostra a lista quando o JS ativar */
     .menu.ativo { display: block !important; }
 
     .menu ul { 
@@ -100,7 +110,6 @@
 
     .btn-rastreio { margin-top: 10px !important; }
 
-    /* Diminui o texto gigante do rodapé */
     .rodape { padding: 25px 15px !important; }
     .logo-rodape h1 { font-size: 1.3rem !important; margin-bottom: 10px !important; }
     .rodape p { font-size: 0.85rem !important; }

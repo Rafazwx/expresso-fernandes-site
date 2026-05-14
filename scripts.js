@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    // --- LÓGICA DO MENU HAMBÚRGUER ---
+    // --- LÓGICA DO MENU HAMBÚRGUER COM ANIMAÇÃO EM X ---
     const btnMenu = document.getElementById('btn-menu');
     const menuPrincipal = document.getElementById('menu-principal');
     const links = menuPrincipal ? menuPrincipal.querySelectorAll('a') : [];
@@ -8,12 +8,14 @@ document.addEventListener("DOMContentLoaded", function() {
     if (btnMenu && menuPrincipal) {
         btnMenu.addEventListener('click', function() {
             menuPrincipal.classList.toggle('ativo');
+            btnMenu.classList.toggle('ativo'); // Esta classe vai fazer o CSS transformar o botão num X
         });
 
-        // Fecha o menu se clicar nalgum link
+        // Fecha o menu e volta ao hambúrguer se clicar nalgum link
         links.forEach(link => {
             link.addEventListener('click', () => {
                 menuPrincipal.classList.remove('ativo');
+                btnMenu.classList.remove('ativo');
             });
         });
     }
