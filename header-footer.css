@@ -1,0 +1,45 @@
+/* =========================================================
+   CABEÇALHO, MENU E RODAPÉ
+   ========================================================= */
+.cabecalho {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 5%; background: white; position: fixed; 
+    width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.link-logo-home { text-decoration: none; color: inherit; display: block; }
+.logo-area-completa { display: flex; align-items: center; gap: 20px; }
+
+.logo-icone-efs {
+    height: 85px; width: auto; display: block;
+    cursor: pointer; transition: transform 0.3s ease;
+}
+.logo-icone-efs:hover { transform: scale(1.05); }
+
+.logo-area-completa h1 { font-size: 24px; color: var(--preto-suave); font-weight: 800; margin: 0; }
+.destaque-vermelho { color: var(--vermelho-efs); }
+
+.menu ul { display: flex; list-style: none; gap: 30px; align-items: center; margin: 0; padding: 0; }
+.menu a { text-decoration: none; color: #1a1a2e; font-weight: 800; font-size: 1.15rem; text-transform: uppercase; transition: color 0.3s ease; }
+.menu a:hover { color: var(--vermelho-efs); }
+
+.btn-rastreio {
+    background-color: var(--amarelo) !important; color: #1a1a2e !important; 
+    padding: 12px 25px !important; border-radius: 8px; font-weight: 800 !important;
+    box-shadow: 0 4px 15px rgba(241, 196, 15, 0.4); transition: all 0.3s ease;
+}
+.btn-rastreio:hover {
+    background-color: var(--vermelho-efs) !important; color: white !important; 
+    transform: translateY(-3px); box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4); 
+}
+
+.rodape { padding: 40px; background: #f4f4f4; text-align: center; border-top: 1px solid #ddd; }
+
+/* Responsividade Cabeçalho */
+@media (max-width: 1024px) {
+    .cabecalho { flex-direction: column; padding: 15px; }
+    .logo-area-completa { margin-bottom: 15px; }
+}
+@media (max-width: 950px) {
+    .menu ul { flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px; }
+}

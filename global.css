@@ -1,0 +1,41 @@
+/* =========================================================
+   GLOBAL: VARIÁVEIS, RESET E ELEMENTOS FLUTUANTES
+   ========================================================= */
+:root {
+    --vermelho-efs: #e63946;
+    --preto-suave: #1d3557;
+    --cinza-fundo: #f8f9fa;
+    --amarelo: #f1c40f;
+    --azul-premium: #0d1b2a;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Open Sans', sans-serif; 
+}
+
+h1, h2, .btn-primary { 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+body { 
+    background-color: white; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+}
+
+/* WHATSAPP FLUTUANTE (CORRIGIDO E INQUEBRÁVEL) */
+.whatsapp-float { 
+    position: fixed; bottom: 30px; right: 30px; 
+    background: #25d366; color: white; padding: 12px 25px; 
+    border-radius: 50px; text-decoration: none; z-index: 9999; 
+    display: flex; align-items: center; gap: 10px; font-weight: bold; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover { transform: scale(1.05); }
+.whatsapp-float img { width: 30px; height: auto; display: block; }
+.whatsapp-float span { white-space: nowrap; font-size: 1.1rem; }
